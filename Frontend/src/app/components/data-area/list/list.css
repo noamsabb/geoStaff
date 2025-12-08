@@ -1,0 +1,156 @@
+/* Modern Table Design */
+.table-container {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  margin: 1rem 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: transparent;
+}
+
+/* Header Styling */
+thead th {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1rem 0.75rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: none;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+thead th:first-child {
+  border-radius: 10px 0 0 0;
+}
+
+thead th:last-child {
+  border-radius: 0 10px 0 0;
+}
+
+/* Body Styling */
+tbody tr {
+  background: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+tbody tr:nth-child(even) {
+  background: rgba(240, 248, 255, 0.8);
+}
+
+tbody tr:hover {
+  background: linear-gradient(135deg, rgba(79, 172, 254, 0.1) 0%, rgba(0, 242, 254, 0.1) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+tbody td {
+  padding: 1rem 0.75rem;
+  border: none;
+  color: #2c3e50;
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+/* Link Styling */
+tbody td a {
+  color: #4facfe;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  color: white;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+tbody td a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(79, 172, 254, 0.4);
+}
+
+/* Delete Button Styling */
+tbody td button {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+  border: none;
+  padding: 0.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+tbody td button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+
+tbody td button:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .table-container {
+    padding: 1rem;
+    border-radius: 15px;
+  }
+  
+  table {
+    font-size: 12px;
+  }
+  
+  thead th,
+  tbody td {
+    padding: 0.5rem 0.25rem;
+  }
+  
+  tbody td a {
+    padding: 0.25rem 0.5rem;
+    font-size: 10px;
+  }
+  
+  tbody td button {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+}
+
+/* Animation on load */
+tbody tr {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

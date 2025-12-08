@@ -1,0 +1,32 @@
+{
+	"info": {
+		"_postman_id": "68104eec-7c39-45f0-ad82-bb8d088308d5",
+		"name": "GeoLoc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46547159",
+		"_collection_link": "https://noamsabban.postman.co/workspace/Noam-Sabban's-Workspace~28718754-4e2a-4b77-8d6d-d2e805846737/collection/46547159-68104eec-7c39-45f0-ad82-bb8d088308d5?action=share&source=collection_link&creator=46547159"
+	},
+	"item": [
+		{
+			"name": "Get All Employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/employees/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"employees",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

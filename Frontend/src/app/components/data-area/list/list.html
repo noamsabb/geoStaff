@@ -1,0 +1,40 @@
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>First Name:</th>
+        <th>Last Name:</th>
+        <th>E-mail</th>
+        <th>Latitude:</th>
+        <th>Longitude:</th>
+        <th>Map Link:</th>
+        <th>Creation Time:</th>
+        <th>Actions:</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (e of employees; track $index) {
+      <tr>
+        <td>
+          {{ e.firstName }}
+        </td>
+        <td>{{ e.lastName }}</td>
+        <td>{{ e.email }}</td>
+        <td>{{ e.latitude }}</td>
+        <td>{{ e.longitude }}</td>
+        <td>
+          <a
+            href="https://www.google.com/maps/@{{ e.latitude }},{{
+              e.longitude
+            }},18z"
+            target="_blank"
+            >Google Maps</a
+          >
+        </td>
+        <td>{{ e.createdAt.toString().slice(0, 16).replace("T", " ") }}</td>
+        <td><button (click)="deleteMe(e._id)">❌</button></td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>

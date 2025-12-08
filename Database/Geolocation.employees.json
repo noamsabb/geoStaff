@@ -1,0 +1,96 @@
+[{
+  "_id": {
+    "$oid": "68c13090facaf052dfe5d949"
+  },
+  "firstName": "Noam",
+  "lastName": "Sabban",
+  "email": "sabban.noam@gmail.com",
+  "latitude": 32.0777124,
+  "longitude": 34.766058,
+  "createdAt": {
+    "$date": "2025-09-10T08:02:24.243Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-10T08:02:24.243Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68c133a9ff0c661487d1c613"
+  },
+  "firstName": "Bart",
+  "lastName": "Simpson",
+  "email": "bart@gmail.com",
+  "latitude": 48.8584,
+  "longitude": 2.2945,
+  "createdAt": {
+    "$date": "2025-09-10T08:15:37.229Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-10T08:15:37.229Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68c133d8ff0c661487d1c617"
+  },
+  "firstName": "Lisa",
+  "lastName": "Simpson",
+  "email": "lisa@gmail.com",
+  "latitude": 40.6892,
+  "longitude": -74.0445,
+  "createdAt": {
+    "$date": "2025-09-10T08:16:24.099Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-10T08:16:24.099Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68c13409ff0c661487d1c61b"
+  },
+  "firstName": "Homer",
+  "lastName": "Simpson",
+  "email": "homer@gmail.com",
+  "latitude": 27.1751,
+  "longitude": 78.0421,
+  "createdAt": {
+    "$date": "2025-09-10T08:17:13.400Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-10T08:17:13.400Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68c13ce3ff0c661487d1c629"
+  },
+  "firstName": "Marge",
+  "lastName": "Simpson",
+  "email": "marge@gmail.com",
+  "latitude": 48.8584,
+  "longitude": 2.2945,
+  "createdAt": {
+    "$date": "2025-09-10T08:54:59.786Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-10T08:54:59.786Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68c152daecd387a5d0a96bea"
+  },
+  "firstName": "John",
+  "lastName": "Bryce",
+  "email": "johnbryce@gmail.com",
+  "latitude": 32.06398391711028,
+  "longitude": 34.7862129241421,
+  "createdAt": {
+    "$date": "2025-09-10T10:28:42.543Z"
+  },
+  "updatedAt": {
+    "$date": "2025-09-10T10:28:42.543Z"
+  }
+}]

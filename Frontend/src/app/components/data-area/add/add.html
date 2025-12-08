@@ -1,0 +1,86 @@
+<div class="form-container">
+  <h2 class="form-title">Add / Update Employee</h2>
+
+  <form (ngSubmit)="send()" #employeeForm="ngForm">
+    <div class="form-group">
+      <label>First Name:</label>
+      <input
+        type="text"
+        name="firstName"
+        [(ngModel)]="employee.firstName"
+        required
+        minlength="2"
+        maxlength="15"
+        #firstName="ngModel"
+        [class.invalid]="firstName.invalid && firstName.dirty"
+      />
+    </div>
+
+    <div class="form-group">
+      <label>Last Name:</label>
+      <input
+        type="text"
+        name="lastName"
+        [(ngModel)]="employee.lastName"
+        minlength="2"
+        maxlength="15"
+        #lastName="ngModel"
+        [class.invalid]="lastName.invalid && lastName.dirty"
+      />
+    </div>
+
+    <div class="form-group">
+      <label>Email:</label>
+      <input
+        type="email"
+        name="email"
+        [(ngModel)]="employee.email"
+        required
+        pattern="^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+        #email="ngModel"
+        [class.invalid]="email.invalid && email.dirty"
+      />
+    </div>
+
+    <div class="form-group">
+      <label>Latitude:</label>
+      <input
+        type="text"
+        name="latitude"
+        [(ngModel)]="employee.latitude"
+        readonly
+      />
+    </div>
+
+    <div class="form-group">
+      <label>Longitude:</label>
+      <input
+        type="text"
+        name="longitude"
+        [(ngModel)]="employee.longitude"
+        readonly
+      />
+    </div>
+
+    <div class="map-container">
+      <div class="map-title">📍 Location Preview</div>
+      <iframe
+        [src]="getMapUrl()"
+        width="300"
+        height="200"
+        class="map-widget"
+        allowfullscreen=""
+        loading="lazy"
+      >
+      </iframe>
+    </div>
+
+    <button
+      type="submit"
+      [disabled]="!employeeForm.form.valid"
+      class="submit-btn"
+    >
+      Add / Update Employee
+    </button>
+  </form>
+</div>

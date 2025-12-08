@@ -1,0 +1,61 @@
+<div class="random-container">
+  <h1 class="page-title">🎯 Random Employee Location</h1>
+  <p class="page-subtitle">
+    Discover where your team members are located! Click the button below to
+    randomly select an employee and view their current location on the map.
+  </p>
+
+  <button (click)="drawEmployee()" class="draw-button">
+    🎲 Draw Random Employee
+  </button>
+
+  @if (employee) {
+  <div class="employee-card">
+    <div class="employee-header">
+      <div class="employee-avatar">
+        {{ employee.firstName.charAt(0) }}{{ employee.lastName.charAt(0) }}
+      </div>
+      <div class="employee-info">
+        <h2 class="employee-name">
+          {{ employee.firstName }} {{ employee.lastName }}
+        </h2>
+      </div>
+    </div>
+
+    <div class="employee-details">
+      <div class="detail-item">
+        <div class="detail-label">📍 Latitude</div>
+        <div class="detail-value">{{ employee.latitude }}</div>
+      </div>
+      <div class="detail-item">
+        <div class="detail-label">🌐 Longitude</div>
+        <div class="detail-value">{{ employee.longitude }}</div>
+      </div>
+    </div>
+
+    <div class="maps-section">
+      <a
+        href="https://www.google.com/maps/@{{ employee.latitude }},{{
+          employee.longitude
+        }},18z"
+        target="_blank"
+        class="maps-link"
+      >
+        🗺️ Open in Google Maps
+      </a>
+
+      <div>
+        <iframe
+          [src]="getMapUrl()"
+          width="500"
+          height="400"
+          class="map-widget"
+          allowfullscreen=""
+          loading="lazy"
+        >
+        </iframe>
+      </div>
+    </div>
+  </div>
+  }
+</div>
