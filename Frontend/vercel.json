@@ -1,6 +1,18 @@
 {
-  "trailingSlash": false,
-  "rewrites": [
-    { "source": "/((?!.*\\.).*)", "destination": "/index.html" }
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(js|css|assets)/.*",
+      "headers": {
+        "cache-control": "max-age=31536000"
+      }
+    },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
